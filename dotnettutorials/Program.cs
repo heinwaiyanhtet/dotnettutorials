@@ -1,22 +1,64 @@
-﻿namespace MainProgam
+﻿using System;
+using System.Collections.Generic;
+
+public class Person
 {
-    class Program 
-    {    
-        static void Main(string[] args)
-        {
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+
+        Comparison<int> comparison = (x, y) => x.CompareTo(y);
+List<int> numbers = new List<int> { 3, 1, 2 };
+numbers.Sort(comparison); // Sorts numbers in ascending order
+
+    Console.WriteLine(comparison);
+
+        // List<Person> people = new List<Person>
+        // {
+        //     new Person { Name = "Alice", Age = 30 },
+        //     new Person { Name = "Bob", Age = 25 },
+        //     new Person { Name = "Charlie", Age = 35 }
+        // };
+
+        // // Sorting by Age using Comparison<T> delegate
+        // people.Sort((x, y) => x.Age.CompareTo(y.Age));
+
+        // foreach (var person in people)
+        // {
+        //     Console.WriteLine($"{person.Name}, {person.Age}");
+        // }
+    }
+}
 
 
 
-            Console.WriteLine("Generic Method Example in C#");
 
-            GenericClass<string> myGenericClass = new GenericClass<string>
-            {
-                Message = "Welcome to DotNetTutorials"
-            };
 
-            myGenericClass.GenericMethod("Pranata Rout", "Bhubaneswar");
 
-            Console.ReadLine();
+// namespace MainProgam
+// {
+//     class Program 
+//     {    
+//         static void Main(string[] args)
+//         {
+
+
+
+//             Console.WriteLine("Generic Method Example in C#");
+
+//             GenericClass<string> myGenericClass = new GenericClass<string>
+//             {
+//                 Message = "Welcome to DotNetTutorials"
+//             };
+
+//             myGenericClass.GenericMethod("Pranata Rout", "Bhubaneswar");
+
+//             Console.ReadLine();
 
 
 
@@ -58,9 +100,9 @@
 
 
 
-        }
-    }
-}
+//         }
+//     }
+// }
 
 
 
